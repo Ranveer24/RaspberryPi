@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "Creating Backup Of xstartup File"
+
+mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+echo "Done"
+
+echo "Now Downloading The xstartup file, For That I Need An Active Internet Connection"
+apt-get install wget
+wget -O xtartup https://raw.githubusercontent.com/Ranveer24/CoolShortcuts/master/xstartup
+
+echo "Downloading Done"
+
+
+echo "Now Doing The Actual Work"
+cp /root/Download/xstartup ~/.vnc/xstartup
+
+echo "If Anything Goes Wrong, I Just Created A Backup File Of "xstartup" file here ==> ~/.vnc/xstartup.bak
+
+
+
+
+#This File Is Just A Script To Copy The "xstartup" (Modified) File From /root/Download to ~/.vnc/ (Existing)
